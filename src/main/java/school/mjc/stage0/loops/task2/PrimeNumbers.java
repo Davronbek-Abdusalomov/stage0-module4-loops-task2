@@ -2,12 +2,18 @@ package school.mjc.stage0.loops.task2;
 
 public class PrimeNumbers {
     public void printPrimeNumbers(int printToInclusive) {
-        int num = 2;
-        while(num<=printToInclusive){
-            for (int i=1; i<=num; i++) {
-                int count=0;
-                if (num%i==0){
-
+     for (int i=2; i<printToInclusive; i++){
+         if (isPrime(i)){
+             System.out.println(i);
+         }
+     }
+    }
+        static boolean isPrime(int a){
+            for (int i=2; i<a; i++){
+                if (a%i==0)
+                    return false;
+            }
+            return true;
                 }
 
             }
